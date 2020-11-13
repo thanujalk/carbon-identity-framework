@@ -2414,10 +2414,10 @@
     </UserFiltering>
 
     <!-- Allowed Userstores -->
-    {% if allowed_user_stores is defined %}
+    {% if allowed_user_stores.classes is defined %}
     <AllowedUserstores>
-        {% for user_store in allowed_user_stores %}
-        <AllowedUserstore>{{user_store.class}}</AllowedUserstore>
+        {% for class in allowed_user_stores.classes %}
+        <AllowedUserstore>{{class}}</AllowedUserstore>
         {% endfor %}
     </AllowedUserstores>
     {% endif %}
